@@ -6,7 +6,7 @@
 - Projeto Vercel: `site-digital`
 - URL do projeto: https://site-digital-blue.vercel.app
 - Framework: Vite
-- Comando de instalação: `npm install --no-audit --no-fund`
+- Comando de instalação: `pnpm install --frozen-lockfile`
 - Build: `npm run build`
 - Diretório publicado: `dist/public`
 - O arquivo `vercel.json` aplica o rewrite de SPA para as rotas do frontend.
