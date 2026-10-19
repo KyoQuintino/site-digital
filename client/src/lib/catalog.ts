@@ -3,6 +3,25 @@ const STORAGE = "/assets/";
 export const products = [
   {
     tag: "NOVO NA COLEÇÃO",
+    category: "PRODUTIVIDADE · GESTÃO DO TEMPO",
+    title: "A Tríade do Tempo",
+    description:
+      "Uma metodologia para refletir sobre as atividades urgentes, importantes e circunstanciais e organizar a rotina de acordo com suas prioridades.",
+    bullets: [
+      "As três esferas da Tríade do Tempo",
+      "Cinco etapas: identidade, metas, planejamento, organização e execução",
+      "Leitura digital",
+    ],
+    image: `${STORAGE}triade-do-tempo-cover.webp`,
+    imageClass: "portrait",
+    panel: "midnight",
+    paymentProvider: "Kiwify",
+    href: "/triade-do-tempo",
+    message:
+      "Olá! Quero conhecer o e-book A Tríade do Tempo, de Christian Barbosa.",
+  },
+  {
+    tag: "NOVO NA COLEÇÃO",
     category: "RESPONSABILIDADE PESSOAL",
     title: "Vá cuidar da sua vida",
     description:

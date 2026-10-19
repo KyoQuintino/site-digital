@@ -1,0 +1,7 @@
+# TODO
+
+- [x] **Nova página de vendas.** Integrar “A Tríade do Tempo” ao repositório existente como rota `/triade-do-tempo`, adaptando a página aprovada ao aplicativo React atual. Preservar a home, o catálogo dos outros e-books e `/admin`.
+- [x] **Catálogo e navegação.** Adicionar “A Tríade do Tempo”, de Christian Barbosa, ao catálogo atual com imagem local, descrição e CTA que leve à nova página; manter as entradas e os links de checkout dos produtos existentes.
+- [x] **Checkout.** Fazer o botão de compra da nova página abrir exatamente `https://pay.kiwify.com.br/geaafqF` em nova aba e identificar a Kiwify nos textos do checkout, sem afirmar preço, segurança, garantia ou condições que não foram confirmadas.
+- [x] **Imagem e materiais do produto.** Incluir no repositório a imagem gerada usada pela nova página e pelo cartão do catálogo, além do título e da descrição comercial para cadastro na Hotmart em `products/a-triade-do-tempo/hotmart-copy.md`. Não incluir o PDF original nem credenciais.
+- [x] **Documentação e entrega.** Atualizar o README com o caminho da nova página, verificar tipos e build da aplicação, e enviar as alterações ao repositório GitHub `KyoQuintino/site-digital` preservando o histórico e os arquivos existentes.

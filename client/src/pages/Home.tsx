@@ -84,6 +84,7 @@ function QuickViewModal({ product, onClose, coverOverrides }: { product: Product
 function ProductCard({ product, onQuickView, coverOverrides }: { product: Product; onQuickView: (product: Product) => void; coverOverrides: CoverOverrides }) {
   const contactHref = `${whatsapp}%20${encodeURIComponent(product.message)}`;
   const cover = getCoverSource(product.title, product.image, coverOverrides);
+  const paymentProvider = "paymentProvider" in product ? product.paymentProvider : "Hotmart";
   return (
     <article className="product-card">
       <div className={`card-visual ${product.panel}`}>
@@ -114,7 +115,7 @@ function ProductCard({ product, onQuickView, coverOverrides }: { product: Produc
           </details>
         )}
         <div className="card-bottom">
-          <span className="micro-label">CONTEÚDO DIGITAL · COMPRA PELA HOTMART</span>
+          <span className="micro-label">CONTEÚDO DIGITAL · COMPRA PELA {paymentProvider}</span>
           <strong>Confira os detalhes <span>na página oficial da oferta</span></strong>
           <div className="card-actions">
             <a className="button button-coral" href={product.href} target="_blank" rel="noreferrer">Quero este e-book <ArrowRight size={14} /></a>
@@ -160,7 +161,7 @@ function Testimonials() {
       <div className="testimonials-grid">
         <blockquote><div className="stars" aria-hidden="true">01</div><p>Escolha por tema, objetivo ou fase da vida.</p><footer><span className="testimonial-person coral-avatar"><Search size={14} /></span><span><strong>Encontre seu tema</strong><small>Busca e filtros na coleção</small></span></footer></blockquote>
         <blockquote className="testimonial-highlight"><div className="stars" aria-hidden="true">02</div><p>Leia a descrição e veja os tópicos antes de decidir.</p><footer><span className="testimonial-person gold-avatar"><Check size={14} /></span><span><strong>Decida com clareza</strong><small>Informações do material</small></span></footer></blockquote>
-        <blockquote><div className="stars" aria-hidden="true">03</div><p>Finalize a compra pela página de checkout da Hotmart.</p><footer><span className="testimonial-person olive-avatar"><MessageCircle size={14} /></span><span><strong>Se precisar, converse</strong><small>Atendimento pelo WhatsApp</small></span></footer></blockquote>
+        <blockquote><div className="stars" aria-hidden="true">03</div><p>Finalize a compra pela página de checkout indicada na oferta.</p><footer><span className="testimonial-person olive-avatar"><MessageCircle size={14} /></span><span><strong>Se precisar, converse</strong><small>Atendimento pelo WhatsApp</small></span></footer></blockquote>
       </div>
     </>
   );
@@ -268,7 +269,7 @@ export default function Home() {
   return (
     <main>
       <a className="skip-link" href="#colecao">Pular para a coleção</a>
-      <div className="announcement">CONTEÚDO QUE CABE NA VIDA REAL <span>—</span> ACESSO DIGITAL IMEDIATO <span>·</span> COMPRA SEGURA</div>
+      <div className="announcement">CONTEÚDO QUE CABE NA VIDA REAL <span>·</span> CHECKOUT NA PÁGINA OFICIAL DE CADA OFERTA</div>
       <header className="site-header" id="inicio">
         <a className="brand-link" href="#inicio"><Brand /></a>
         <nav className={menuOpen ? "open" : ""} aria-label="Navegação principal">
@@ -291,7 +292,7 @@ export default function Home() {
       <PopularShelf onQuickView={setQuickViewProduct} coverOverrides={coverOverrides} />
 
       <section className="collection section-shell" id="colecao">
-        <SectionHeading eyebrow="A COLEÇÃO DIGITALQUINTINO" body="Vinte e seis leituras para momentos diferentes. Você escolhe o tema, conhece a proposta e segue para a Hotmart quando estiver pronto.">Escolha a próxima <em>página.</em></SectionHeading>
+        <SectionHeading eyebrow="A COLEÇÃO DIGITALQUINTINO" body="Vinte e oito leituras para momentos diferentes. Conheça cada proposta e siga para o checkout indicado na página oficial da oferta escolhida.">Escolha a próxima <em>página.</em></SectionHeading>
         <div className="collection-toolbar"><div className="collection-filters"><label htmlFor="category-filter">Filtrar por categoria</label><select id="category-filter" value={categoryFilter} onChange={(event) => setCategoryFilter(event.target.value)}>{categories.map((category) => <option key={category}>{category}</option>)}</select></div><span className="collection-count" aria-live="polite">{normalizedSearch || categoryFilter !== "Todas as categorias" ? `${filteredProducts.length} resultado${filteredProducts.length === 1 ? "" : "s"}` : `${products.length} e-books para escolher`}</span>{(normalizedSearch || categoryFilter !== "Todas as categorias") && <button type="button" onClick={() => { setSearchTerm(""); setCategoryFilter("Todas as categorias"); }}>Limpar filtros</button>}</div>
         <div className="interest-row" aria-label="Escolha por interesse"><span>Quero cuidar de:</span>{categories.slice(1, 6).map((category) => <button key={category} type="button" className={categoryFilter === category ? "active" : ""} onClick={() => setCategoryFilter(category)}>{category}</button>)}{categoryFilter !== "Todas as categorias" && <button type="button" className="interest-clear" onClick={() => setCategoryFilter("Todas as categorias")}>Todas</button>}</div>
         {filteredProducts.length > 0 ? <div className="product-grid">{filteredProducts.map((product) => <ProductCard product={product} onQuickView={setQuickViewProduct} coverOverrides={coverOverrides} key={product.title} />)}</div> : <div className="empty-results"><Search size={24} /><strong>Nenhum e-book encontrado</strong><p>Tente buscar por outro tema, título ou palavra-chave.</p><button className="button button-outline" type="button" onClick={() => { setSearchTerm(""); setCategoryFilter("Todas as categorias"); }}>Ver toda a coleção</button></div>}
@@ -332,7 +333,7 @@ export default function Home() {
       <LeadCapture />
       {quickViewProduct && <QuickViewModal product={quickViewProduct} coverOverrides={coverOverrides} onClose={() => setQuickViewProduct(null)} />}
 
-      <section className="faq-section section-shell" id="duvidas"><SectionHeading centered eyebrow="TUDO BEM PERGUNTAR" body="Se ainda ficou alguma dúvida, fale com a gente pelo WhatsApp. A mensagem já vai com o resumo do e-book escolhido.">Dúvidas <em>frequentes.</em></SectionHeading><div className="faq-list"><details open><summary>Como recebo meu e-book após a compra? <ChevronDown size={18} /></summary><p>Após a confirmação do pagamento, siga as instruções de acesso apresentadas pela Hotmart para o produto comprado.</p></details><details><summary>Posso ler no celular ou tablet? <ChevronDown size={18} /></summary><p>Sim. Os arquivos são digitais e foram pensados para funcionar no celular, tablet, computador e leitores digitais.</p></details><details><summary>As condições de compra são iguais para todos os e-books? <ChevronDown size={18} /></summary><p>Não necessariamente. Confira preço, forma de pagamento, acesso e demais condições na página oficial de cada oferta antes de concluir a compra.</p></details><details><summary>Há garantia ou possibilidade de reembolso? <ChevronDown size={18} /></summary><p>As regras podem variar conforme a oferta. Consulte os prazos e as condições exibidos na página oficial do produto na Hotmart.</p></details><details><summary>Preciso escolher um e-book específico agora? <ChevronDown size={18} /></summary><p>Não. Você pode explorar a coleção e conversar conosco antes de decidir.</p></details></div></section>
+      <section className="faq-section section-shell" id="duvidas"><SectionHeading centered eyebrow="TUDO BEM PERGUNTAR" body="Se ainda ficou alguma dúvida, fale com a gente pelo WhatsApp. A mensagem já vai com o resumo do e-book escolhido.">Dúvidas <em>frequentes.</em></SectionHeading><div className="faq-list"><details open><summary>Como recebo meu e-book após a compra? <ChevronDown size={18} /></summary><p>Após a confirmação do pagamento, siga as instruções de acesso indicadas na página oficial da oferta escolhida. O checkout pode ser processado por diferentes plataformas.</p></details><details><summary>Posso ler no celular ou tablet? <ChevronDown size={18} /></summary><p>Sim. Os arquivos são digitais e foram pensados para funcionar no celular, tablet, computador e leitores digitais.</p></details><details><summary>As condições de compra são iguais para todos os e-books? <ChevronDown size={18} /></summary><p>Não necessariamente. Confira preço, forma de pagamento, acesso e demais condições na página oficial de cada oferta antes de concluir a compra.</p></details><details><summary>Há garantia ou possibilidade de reembolso? <ChevronDown size={18} /></summary><p>As regras podem variar conforme a oferta. Consulte os prazos, os critérios de elegibilidade e as condições na página oficial do produto e do provedor de pagamento.</p></details><details><summary>Preciso escolher um e-book específico agora? <ChevronDown size={18} /></summary><p>Não. Você pode explorar a coleção e conversar conosco antes de decidir.</p></details></div></section>
 
       <footer><div className="footer-brand"><a className="brand-link" href="#inicio"><Brand /></a><p>Leituras para viver com mais presença.</p></div><div className="footer-links"><a href="#colecao">Coleção</a><a href="#duvidas">Dúvidas</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a></div><div className="footer-legal">© 2026 DigitalQuintino · Conteúdo digital</div></footer>
       <a className="whatsapp-float" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><MessageCircle size={24} /></a>

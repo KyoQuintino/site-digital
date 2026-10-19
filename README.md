@@ -23,7 +23,7 @@ pnpm check
 pnpm build
 ```
 
-O pacote inclui as páginas `/` e `/admin`, os componentes, estilos, configurações e as imagens utilizadas no catálogo e no hero para os 27 e-books, incluindo o destaque de “40 Dias com Deus”. `node_modules`, `.git`, logs internos e artefatos temporários foram omitidos para manter o download leve e reproduzível.
+O pacote inclui as páginas `/` e `/admin`, os componentes, estilos, configurações e as imagens utilizadas no catálogo e no hero para os 28 e-books, incluindo o destaque de “40 Dias com Deus”. `node_modules`, `.git`, logs internos e artefatos temporários foram omitidos para manter o download leve e reproduzível.
 
 
 ## Atualizações desta edição focada em conversão
@@ -35,7 +35,7 @@ O pacote inclui as páginas `/` e `/admin`, os componentes, estilos, configuraç
 
 ## Antes de publicar
 
-1. Revise todos os links de checkout Hotmart no catálogo e confirme que cada link corresponde ao produto correto.
+1. Revise todos os links de checkout do catálogo (Hotmart ou Kiwify) e confirme que cada link corresponde ao produto correto.
 2. Substitua os dados de exemplo por depoimentos reais, com autorização dos clientes, caso queira exibir avaliações.
 3. Configure domínio próprio, URL canônica, imagem social Open Graph e sitemap/robots conforme o domínio final.
 4. Para painel administrativo real, implemente autenticação e autorização no servidor, persistência no banco de dados e validação dos arquivos enviados.
@@ -58,3 +58,10 @@ Para validar tipos e build, use `pnpm check` e `pnpm build` num ambiente com dep
 - **Conteúdo e precisão:** título, jornada de 40 dias, versículos, reflexões, orações, desafios práticos e seis etapas seguem a página oficial. Não foram acrescentados preço, depoimentos, autoria, garantia ou promessas sem confirmação.
 - **Conversão:** os botões usam exatamente o link informado pelo produtor/afiliado (`https://go.hotmart.com/T107963872D`). Confira as condições finais na página oficial.
 - **Imagens:** a mockup do e-book e a imagem editorial são arquivos locais em `client/public/assets/`; nenhuma imagem depende de hotlink externo.
+
+
+## Nova página: A Tríade do Tempo
+
+A página de vendas de **A Tríade do Tempo**, de Christian Barbosa, está disponível na rota `/triade-do-tempo`. A nova entrada também aparece no catálogo da DigitalQuintino, sem substituir a home, os demais produtos ou o painel `/admin`.
+
+O botão de compra encaminha para o checkout Kiwify informado pelo produtor. A capa usada na página e no catálogo fica em `client/public/assets/triade-do-tempo-cover.webp`; a copy para cadastro na Hotmart está em `products/a-triade-do-tempo/hotmart-copy.md`. O PDF original não faz parte do repositório.
