@@ -71,3 +71,6 @@ O botão de compra encaminha para o checkout Kiwify informado pelo produtor. A c
 A landing page cinematográfica de **Os Pré-Socráticos** está disponível na rota `/os-presocraticos` e também foi adicionada ao catálogo principal. A página usa as imagens locais `client/public/assets/ebook-hero.webp` e `client/public/assets/ebook-cover-promo.webp`, para funcionar sem hotlinks externos. A copy para cadastro na Hotmart está em `products/os-presocraticos/hotmart-copy.md`.
 
 O PDF integral não foi incluído neste repositório público porque o arquivo informa copyright e direitos exclusivos da edição de 1996. Ele pode ser adicionado posteriormente mediante confirmação de autorização para distribuição pública.
+
+## Nova página: 101 Sucos Detox
+A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, foi adicionada como página estática em `/101-sucos-detox`. Ela preserva o catálogo principal e usa somente arquivos locais em `client/public/101-sucos-detox/`. Os CTAs de compra apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/p7Zu3B7`.

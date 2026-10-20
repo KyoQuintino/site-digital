@@ -5,6 +5,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/101-sucos-detox",
+      "destination": "/101-sucos-detox/index.html"
+    },
+    {
+      "source": "/101-sucos-detox/",
+      "destination": "/101-sucos-detox/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
