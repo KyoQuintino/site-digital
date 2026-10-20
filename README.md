@@ -1,6 +1,6 @@
 # DigitalQuintino — projeto completo
 
-Pacote independente da página DigitalQuintino, com código-fonte e capas locais. As referências `/manus-storage/...` foram convertidas para `/assets/...` para que o projeto funcione fora do WebDev.
+Pacote da página DigitalQuintino com código-fonte e capas locais. A landing de “O Pior Ano da Sua Vida” mantém a arte principal hospedada no site Manus original; essa dependência está documentada na seção da página.
 
 ## Requisitos
 
@@ -23,8 +23,7 @@ pnpm check
 pnpm build
 ```
 
-O pacote inclui as páginas `/` e `/admin`, os componentes, estilos, configurações e as imagens utilizadas no catálogo e no hero para os 28 e-books, incluindo o destaque de “40 Dias com Deus”. `node_modules`, `.git`, logs internos e artefatos temporários foram omitidos para manter o download leve e reproduzível.
-
+O projeto inclui a página de catálogo, o painel `/admin`, as landings documentadas neste README, componentes, estilos, configurações e recursos visuais para a coleção de 29 e-books. `node_modules`, `.git`, logs internos e artefatos temporários foram omitidos para manter o download leve e reproduzível.
 
 ## Atualizações desta edição focada em conversão
 
@@ -50,7 +49,6 @@ pnpm dev
 
 Para validar tipos e build, use `pnpm check` e `pnpm build` num ambiente com dependências instaladas.
 
-
 ## Extensão editorial: 40 Dias com Deus
 
 - **Modo:** extensão da página existente; mantém o catálogo, os componentes, as fontes Playfair Display/DM Sans, as cores papel/verde/coral e as rotas atuais. Um novo atalho leva à seção dedicada.
@@ -58,7 +56,6 @@ Para validar tipos e build, use `pnpm check` e `pnpm build` num ambiente com dep
 - **Conteúdo e precisão:** título, jornada de 40 dias, versículos, reflexões, orações, desafios práticos e seis etapas seguem a página oficial. Não foram acrescentados preço, depoimentos, autoria, garantia ou promessas sem confirmação.
 - **Conversão:** os botões usam exatamente o link informado pelo produtor/afiliado (`https://go.hotmart.com/T107963872D`). Confira as condições finais na página oficial.
 - **Imagens:** a mockup do e-book e a imagem editorial são arquivos locais em `client/public/assets/`; nenhuma imagem depende de hotlink externo.
-
 
 ## Nova página: A Tríade do Tempo
 
@@ -73,4 +70,11 @@ A landing page cinematográfica de **Os Pré-Socráticos** está disponível na 
 O PDF integral não foi incluído neste repositório público porque o arquivo informa copyright e direitos exclusivos da edição de 1996. Ele pode ser adicionado posteriormente mediante confirmação de autorização para distribuição pública.
 
 ## Nova página: 101 Sucos Detox
-A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, foi adicionada como página estática em `/101-sucos-detox`. Ela preserva o catálogo principal e usa somente arquivos locais em `client/public/101-sucos-detox/`. Os CTAs de compra apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/p7Zu3B7`.
+
+A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, está disponível em `/101-sucos-detox` como página estática. Ela preserva o catálogo principal e usa arquivos locais em `client/public/101-sucos-detox/`. Os CTAs apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/p7Zu3B7`.
+
+## Nova página: O Pior Ano da Sua Vida
+
+A landing page está disponível na rota `/o-pior-ano-da-sua-vida` e também foi adicionada ao catálogo principal, sem substituir a home, os demais produtos ou o painel `/admin`. Os CTAs seguem para o checkout Kiwify informado: `https://pay.kiwify.com.br/ILln18s`.
+
+A página usa a arte já hospedada no site Manus original; por isso, a imagem depende dessa URL pública. A copy de cadastro Hotmart fica em `products/o-pior-ano-da-sua-vida/hotmart-copy.md`. O PDF integral não foi adicionado ao repositório público. A seção de opiniões permanece reservada a depoimentos reais e autorizados.

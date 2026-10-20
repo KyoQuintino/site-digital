@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import TriadeDoTempo from "./pages/TriadeDoTempo";
 import ComoFazerAmigos from "./pages/ComoFazerAmigos";
 import Presocraticos from "./pages/Presocraticos";
+import PiorAnoDaSuaVida from "./pages/PiorAnoDaSuaVida";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/triade-do-tempo" component={TriadeDoTempo} />
       <Route path="/como-fazer-amigos-e-influenciar-pessoas" component={ComoFazerAmigos} />
       <Route path="/os-presocraticos" component={Presocraticos} />
+      <Route path="/o-pior-ano-da-sua-vida" component={PiorAnoDaSuaVida} />
       <Route path="/admin" component={Admin} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />

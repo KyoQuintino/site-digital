@@ -17,6 +17,21 @@ export const products = [
   },
   {
     tag: "NOVA LEITURA",
+    category: "DESENVOLVIMENTO PESSOAL · AÇÃO",
+    title: "O Pior Ano da Sua Vida",
+    description:
+      "Uma proposta prática para rever hábitos, escolhas e metas e transformar reflexão em ações possíveis no dia a dia.",
+    bullets: ["20 capítulos no conteúdo", "Reflexões e tarefas práticas", "E-book em PDF, edição 1, volume 1"],
+    image: "https://piorano-jdavg4xc.manus.space/manus-storage/async-images/yiAjAsOgIZKSQEW82mPTed/image-1.webp",
+    imageClass: "portrait",
+    panel: "midnight",
+    paymentProvider: "Kiwify",
+    href: "/o-pior-ano-da-sua-vida",
+    message:
+      "Olá! Quero saber mais sobre o e-book “O Pior Ano da Sua Vida”. Vi na DigitalQuintino e gostaria de receber ajuda para finalizar meu pedido.",
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "COMUNICAÇÃO · RELACIONAMENTOS",
     title: "Como Fazer Amigos e Influenciar Pessoas",
     description:
