@@ -3,6 +3,24 @@ const STORAGE = "/assets/";
 export const products = [
   {
     tag: "NOVA LEITURA",
+    category: "REFLEXÕES · FILOSOFIA DE VIDA",
+    title: "Viver em Paz para Morrer em Paz",
+    description:
+      "Uma leitura de Mario Sergio Cortella sobre escolhas, convivência, felicidade e o sentido de deixar uma marca na vida.",
+    bullets: [
+      "Reflexões sobre aprendizagem, saudade, discordância e amor",
+      "Temas do cotidiano, consumo e felicidade",
+      "E-book digital em PDF",
+    ],
+    image: `${STORAGE}viver-em-paz-para-morrer-em-paz.png`,
+    imageClass: "portrait",
+    panel: "warm",
+    href: "https://go.hotmart.com/U108118072R",
+    message:
+      "Olá! Quero saber mais sobre o e-book “Viver em Paz para Morrer em Paz”, de Mario Sergio Cortella. Vi na DigitalQuintino e gostaria de receber ajuda para finalizar meu pedido.",
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "ESPIRITUALIDADE · AUTOCONHECIMENTO",
     title: "Limite Zero",
     description:
