@@ -22,6 +22,14 @@
       "destination": "/101-sucos-detox/index.html"
     },
     {
+      "source": "/por-que-fazemos-o-que-fazemos",
+      "destination": "/por-que-fazemos-o-que-fazemos/index.html"
+    },
+    {
+      "source": "/por-que-fazemos-o-que-fazemos/",
+      "destination": "/por-que-fazemos-o-que-fazemos/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
