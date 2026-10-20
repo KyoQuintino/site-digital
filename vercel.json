@@ -6,6 +6,14 @@
   "outputDirectory": "dist/public",
   "rewrites": [
     {
+      "source": "/limite-zero",
+      "destination": "/limite-zero/index.html"
+    },
+    {
+      "source": "/limite-zero/",
+      "destination": "/limite-zero/index.html"
+    },
+    {
       "source": "/101-sucos-detox",
       "destination": "/101-sucos-detox/index.html"
     },

@@ -3,6 +3,25 @@ const STORAGE = "/assets/";
 export const products = [
   {
     tag: "NOVA LEITURA",
+    category: "ESPIRITUALIDADE · AUTOCONHECIMENTO",
+    title: "Limite Zero",
+    description:
+      "Uma leitura sobre Ho’oponopono da Identidade Própria, liberdade interior e paz, contada por Joe Vitale e Ihaleakala Hew Len.",
+    bullets: [
+      "Conheça a abordagem apresentada pelos autores",
+      "As quatro frases no contexto do livro",
+      "E-book digital com checkout pela Kiwify",
+    ],
+    image: `${STORAGE}limite-zero-cover.webp`,
+    imageClass: "portrait",
+    panel: "midnight",
+    paymentProvider: "Kiwify",
+    href: "/limite-zero/",
+    message:
+      "Olá! Quero conhecer o e-book Limite Zero. Vi na DigitalQuintino e gostaria de receber ajuda.",
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "FILOSOFIA · HISTÓRIA DAS IDEIAS",
     title: "Os Pré-Socráticos",
     description:

@@ -78,3 +78,8 @@ A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, est
 A landing page está disponível na rota `/o-pior-ano-da-sua-vida` e também foi adicionada ao catálogo principal, sem substituir a home, os demais produtos ou o painel `/admin`. Os CTAs seguem para o checkout Kiwify informado: `https://pay.kiwify.com.br/ILln18s`.
 
 A página usa a arte já hospedada no site Manus original; por isso, a imagem depende dessa URL pública. A copy de cadastro Hotmart fica em `products/o-pior-ano-da-sua-vida/hotmart-copy.md`. O PDF integral não foi adicionado ao repositório público. A seção de opiniões permanece reservada a depoimentos reais e autorizados.
+
+
+## Nova página: Limite Zero
+
+A landing page de **Limite Zero**, de Joe Vitale e Ihaleakala Hew Len, está disponível em `/limite-zero/` e foi adicionada ao catálogo principal da vitrine. A capa original em PNG e a versão otimizada em WebP ficam em `client/public/assets/`; os arquivos da landing ficam em `client/public/limite-zero/`. Os CTAs apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/oIqQUxE`. A copy de cadastro para Hotmart está em `products/limite-zero/hotmart-copy.md`. O PDF integral do livro não foi incluído neste repositório público.
