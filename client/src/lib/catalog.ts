@@ -54,6 +54,20 @@ export const products = [
   },
   {
     tag: "NOVA LEITURA",
+    category: "FILOSOFIA · PROPÓSITO E TRABALHO",
+    title: "Por Que Fazemos o Que Fazemos?",
+    description:
+      "Uma reflexão de Mario Sergio Cortella sobre propósito, motivação, ética e o sentido do trabalho.",
+    bullets: ["Vinte capítulos sobre propósito e trabalho", "Temas de motivação, ética e valores", "Conheça os temas antes de acessar a oferta"],
+    image: `${STORAGE}por-que-fazemos-capa.webp`,
+    imageClass: "portrait",
+    panel: "midnight",
+    href: "/por-que-fazemos-o-que-fazemos/",
+    message:
+      "Olá! Gostaria de saber mais sobre o e-book Por Que Fazemos o Que Fazemos?, de Mario Sergio Cortella.",
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "DESENVOLVIMENTO PESSOAL · AÇÃO",
     title: "O Pior Ano da Sua Vida",
     description:
