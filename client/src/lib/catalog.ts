@@ -2,6 +2,21 @@ const STORAGE = "/assets/";
 
 export const products = [
   {
+    tag: "NOVA LEITURA",
+    category: "COMUNICAÇÃO · RELACIONAMENTOS",
+    title: "Como Fazer Amigos e Influenciar Pessoas",
+    description:
+      "Um guia clássico e atemporal para conversar com mais presença, criar vínculos verdadeiros e influenciar pessoas com respeito.",
+    bullets: ["Conversas mais claras e interessantes", "Relações com mais confiança", "Leitura digital com acesso pela Kiwify"],
+    image: `${STORAGE}como-fazer-amigos-e-influenciar-pessoas.png`,
+    imageClass: "portrait",
+    panel: "midnight",
+    paymentProvider: "Kiwify",
+    href: "/como-fazer-amigos-e-influenciar-pessoas",
+    message:
+      "Olá! Quero conhecer o e-book Como Fazer Amigos e Influenciar Pessoas. Vi na DigitalQuintino e gostaria de receber ajuda.",
+  },
+  {
     tag: "NOVO NA COLEÇÃO",
     category: "PRODUTIVIDADE · GESTÃO DO TEMPO",
     title: "A Tríade do Tempo",
