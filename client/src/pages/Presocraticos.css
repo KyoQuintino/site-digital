@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
+
+.presocraticos-landing {
+  --ink: #091927;
+  --ink-soft: #142f43;
+  --ink-lighter: #234a64;
+  --paper: #f3eee5;
+  --paper-light: #fbfaf7;
+  --paper-deep: #e5dbcb;
+  --gold: #c6a46a;
+  --gold-bright: #e3c786;
+  --gold-dark: #8d6b39;
+  --muted: #6e7774;
+  --line: rgba(9, 25, 39, .14);
+  --white: #fffdf9;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Manrope', Arial, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+.presocraticos-landing * { box-sizing: border-box; }
+.presocraticos-landing { scroll-behavior: smooth; }
+.presocraticos-landing { margin: 0; background: var(--paper-light); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.7; }
+.presocraticos-landing a { color: inherit; text-decoration: none; }
+.presocraticos-landing button { font: inherit; }
+.presocraticos-landing *:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 4px; }
+.presocraticos-landing .site-shell { overflow: hidden; }
+
+.presocraticos-landing .site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--white); transition: background .35s ease, box-shadow .35s ease, padding .35s ease; }
+.presocraticos-landing .site-header.is-scrolled { background: rgba(9, 25, 39, .92); backdrop-filter: blur(16px); box-shadow: 0 1px 0 rgba(255,255,255,.08); }
+.presocraticos-landing .header-inner { display: flex; align-items: center; justify-content: space-between; width: min(1200px, calc(100% - 64px)); margin: 0 auto; padding: 25px 0; }
+.presocraticos-landing .brand { display: inline-flex; align-items: center; gap: 11px; letter-spacing: -.02em; }
+.presocraticos-landing .brand-mark { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid rgba(227,199,134,.7); border-radius: 50%; color: var(--gold-bright); }
+.presocraticos-landing .brand strong, .presocraticos-landing .brand small { display: block; }
+.presocraticos-landing .brand strong { font-size: 13px; font-weight: 800; letter-spacing: .02em; }
+.presocraticos-landing .brand small { margin-top: -2px; color: rgba(255,255,255,.58); font-family: var(--mono); font-size: 8px; letter-spacing: .04em; text-transform: uppercase; }
+.presocraticos-landing .nav-links { display: flex; align-items: center; gap: 30px; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.presocraticos-landing .nav-links > a:not(.nav-cta) { color: rgba(255,255,255,.68); transition: color .2s ease; }
+.presocraticos-landing .nav-links > a:not(.nav-cta):hover { color: var(--gold-bright); }
+.presocraticos-landing .nav-cta { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(227,199,134,.65); padding: 10px 15px; color: var(--gold-bright); transition: background .2s ease, color .2s ease; }
+.presocraticos-landing .nav-cta:hover { background: var(--gold-bright); color: var(--ink); }
+.presocraticos-landing .menu-button { display: none; border: 0; background: transparent; color: var(--white); }
+
+.presocraticos-landing .hero-section { position: relative; min-height: 820px; color: var(--white); background-position: center; background-size: cover; isolation: isolate; }
+.presocraticos-landing .hero-section::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(8,19,31,.94), transparent 35%); }
+.presocraticos-landing .hero-grain { position: absolute; inset: 0; z-index: -1; opacity: .12; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E"); mix-blend-mode: soft-light; }
+.presocraticos-landing .hero-inner { position: relative; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(420px, .98fr); align-items: center; gap: 60px; width: min(1200px, calc(100% - 64px)); min-height: 820px; margin: 0 auto; padding: 130px 0 80px; }
+.presocraticos-landing .hero-copy { max-width: 620px; }
+.presocraticos-landing .eyebrow, .presocraticos-landing .section-kicker { display: flex; align-items: center; gap: 11px; color: var(--gold); font-family: var(--mono); font-size: 10px; letter-spacing: .14em; line-height: 1.3; text-transform: uppercase; }
+.presocraticos-landing .eyebrow-line { display: block; width: 32px; height: 1px; background: var(--gold); }
+.presocraticos-landing h1, .presocraticos-landing h2, .presocraticos-landing h3, .presocraticos-landing p { margin-top: 0; }
+.presocraticos-landing h1, .presocraticos-landing h2 { font-family: var(--serif); font-weight: 500; letter-spacing: -.055em; line-height: 1.04; }
+.presocraticos-landing h1 { max-width: 650px; margin: 25px 0 25px; font-size: clamp(52px, 6.3vw, 88px); }
+.presocraticos-landing h1 em, .presocraticos-landing h2 em { color: var(--gold-bright); font-weight: 500; }
+.presocraticos-landing .hero-lead { max-width: 475px; margin-bottom: 34px; color: rgba(255,255,255,.7); font-size: 16px; line-height: 1.85; }
+.presocraticos-landing .hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.presocraticos-landing .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid transparent; padding: 15px 21px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: transform .22s ease, background .22s ease, color .22s ease, border-color .22s ease; }
+.presocraticos-landing .button:hover { transform: translateY(-2px); }
+.presocraticos-landing .button-primary { background: var(--gold-bright); color: var(--ink); }
+.presocraticos-landing .button-primary:hover { background: #f0d99b; }
+.presocraticos-landing .button-dark { background: var(--ink); color: var(--white); }
+.presocraticos-landing .button-dark:hover { background: var(--ink-lighter); }
+.presocraticos-landing .button-gold { background: var(--gold-bright); color: var(--ink); }
+.presocraticos-landing .text-link { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,.62); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.presocraticos-landing .text-link:hover { color: var(--gold-bright); }
+.presocraticos-landing .hero-proof { display: flex; align-items: center; gap: 9px; margin-top: 46px; color: rgba(255,255,255,.48); font-family: var(--mono); font-size: 9px; line-height: 1.5; text-transform: uppercase; }
+.presocraticos-landing .hero-proof svg { color: var(--gold); flex: 0 0 auto; }
+.presocraticos-landing .hero-product { position: relative; display: grid; place-items: center; min-height: 520px; }
+.presocraticos-landing .book-mockup { position: relative; z-index: 2; width: min(320px, 63vw); aspect-ratio: .69; transform: perspective(1000px) rotateY(-12deg) rotateZ(2deg); filter: drop-shadow(32px 34px 22px rgba(0,0,0,.48)); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.presocraticos-landing .hero-product:hover .book-mockup { transform: perspective(1000px) rotateY(-5deg) rotateZ(1deg) translateY(-8px); }
+.presocraticos-landing .book-cover { position: absolute; inset: 0 18px 0 0; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 36px 24px 27px; border: 1px solid rgba(227,199,134,.45); background-color: #0c2336; background-position: center; background-size: cover; box-shadow: inset 0 0 0 7px rgba(9,25,39,.22), inset 0 0 60px rgba(0,0,0,.4); }
+.presocraticos-landing .book-cover::after { content: ''; position: absolute; inset: 13px; border: 1px solid rgba(227,199,134,.36); pointer-events: none; }
+.presocraticos-landing .book-cover > * { position: relative; z-index: 1; }
+.presocraticos-landing .cover-ornament { align-self: center; color: var(--gold-bright); font-size: 26px; }
+.presocraticos-landing .cover-series, .presocraticos-landing .cover-subtitle, .presocraticos-landing .cover-footer { color: rgba(245,226,181,.82); font-family: var(--mono); font-size: 7px; letter-spacing: .14em; line-height: 1.7; text-align: center; }
+.presocraticos-landing .cover-series { margin: 0; }
+.presocraticos-landing .book-cover h2 { margin: 4px 0; color: #f4e9cc; font-size: 37px; line-height: .9; text-align: center; letter-spacing: -.08em; }
+.presocraticos-landing .book-cover h2 span { color: var(--gold-bright); }
+.presocraticos-landing .cover-rule { width: 52px; height: 1px; margin: 0 auto; background: var(--gold); }
+.presocraticos-landing .cover-subtitle { margin: 0; }
+.presocraticos-landing .cover-footer { margin: auto 0 0; font-size: 6px; }
+.presocraticos-landing .book-pages { position: absolute; z-index: -1; top: 5px; right: 0; bottom: 5px; width: 24px; border: 1px solid #a4967f; border-left: 0; background: repeating-linear-gradient(0deg, #e5d8c0 0, #e5d8c0 2px, #b6aa94 2px, #b6aa94 3px); transform: skewY(-2deg); }
+.presocraticos-landing .edition-stamp { position: absolute; z-index: 4; right: -11px; bottom: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 125px; height: 125px; border: 1px solid rgba(227,199,134,.65); border-radius: 50%; background: rgba(9,25,39,.72); color: var(--gold-bright); box-shadow: 0 12px 25px rgba(0,0,0,.28); transform: rotate(9deg); text-align: center; }
+.presocraticos-landing .stamp-star { margin-bottom: 4px; font-size: 16px; }
+.presocraticos-landing .edition-stamp strong { font-family: var(--serif); font-size: 13px; line-height: 1.05; }
+.presocraticos-landing .edition-stamp small { width: 70%; margin-top: 7px; color: rgba(255,255,255,.55); font-family: var(--mono); font-size: 6px; line-height: 1.3; text-transform: uppercase; }
+.presocraticos-landing .orbit { position: absolute; border: 1px solid rgba(227,199,134,.3); border-radius: 50%; transform: rotate(-19deg); }
+.presocraticos-landing .orbit-one { width: 530px; height: 190px; }
+.presocraticos-landing .orbit-two { width: 400px; height: 145px; transform: rotate(48deg); border-color: rgba(255,255,255,.12); }
+.presocraticos-landing .hero-scroll { position: absolute; bottom: 26px; left: 50%; display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.42); font-family: var(--mono); font-size: 8px; letter-spacing: .12em; text-transform: uppercase; transform: translateX(-50%); }
+.presocraticos-landing .hero-scroll span { display: block; width: 31px; height: 1px; background: var(--gold); }
+
+.presocraticos-landing .statement-section, .presocraticos-landing .chapters-section, .presocraticos-landing .editorial-section, .presocraticos-landing .testimonials-section, .presocraticos-landing .audience-section, .presocraticos-landing .faq-section { padding: 125px 0; }
+.presocraticos-landing .statement-section { background: var(--paper-light); }
+.presocraticos-landing .section-rule { width: min(1200px, calc(100% - 64px)); height: 1px; margin: 0 auto 76px; background: var(--line); }
+.presocraticos-landing .statement-grid { display: grid; grid-template-columns: .48fr 1fr; gap: 80px; width: min(980px, calc(100% - 64px)); margin: 0 auto; }
+.presocraticos-landing .section-kicker { color: var(--gold-dark); }
+.presocraticos-landing .statement-grid h2, .presocraticos-landing .section-heading h2, .presocraticos-landing .editorial-copy h2, .presocraticos-landing .audience-copy h2, .presocraticos-landing .faq-grid h2 { margin: 17px 0 25px; font-size: clamp(38px, 4.4vw, 60px); }
+.presocraticos-landing .statement-grid h2 { max-width: 590px; }
+.presocraticos-landing .statement-lead { max-width: 680px; color: var(--ink-soft); font-family: var(--serif); font-size: 22px; line-height: 1.55; }
+.presocraticos-landing .statement-grid p:not(.statement-lead) { max-width: 650px; color: var(--muted); }
+
+.presocraticos-landing .dark-section { position: relative; overflow: hidden; padding: 130px 0 135px; background: var(--ink); color: var(--white); }
+.presocraticos-landing .dark-glow { position: absolute; top: -35%; right: -10%; width: 70%; height: 80%; border-radius: 50%; background: radial-gradient(ellipse, rgba(42, 91, 118, .45), transparent 68%); filter: blur(30px); pointer-events: none; }
+.presocraticos-landing .section-container { position: relative; width: min(1200px, calc(100% - 64px)); margin: 0 auto; }
+.presocraticos-landing .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 70px; margin-bottom: 67px; }
+.presocraticos-landing .section-heading h2 { margin-bottom: 0; }
+.presocraticos-landing .light-heading .section-kicker { color: var(--gold-bright); }
+.presocraticos-landing .light-heading p { max-width: 350px; margin-bottom: 8px; color: rgba(255,255,255,.55); font-size: 14px; }
+.presocraticos-landing .author-list { border-top: 1px solid rgba(255,255,255,.16); }
+.presocraticos-landing .author-row { display: grid; grid-template-columns: 80px 1fr 1.05fr 28px; align-items: center; gap: 24px; min-height: 73px; border-bottom: 1px solid rgba(255,255,255,.12); transition: padding .25s ease, background .25s ease; }
+.presocraticos-landing .author-row:hover { padding: 0 17px; background: rgba(255,255,255,.04); }
+.presocraticos-landing .author-number { color: var(--gold); font-family: var(--mono); font-size: 11px; }
+.presocraticos-landing .author-name { font-family: var(--serif); font-size: 21px; }
+.presocraticos-landing .author-note { color: rgba(255,255,255,.44); font-size: 12px; }
+.presocraticos-landing .author-arrow { color: var(--gold); opacity: .5; }
+
+.presocraticos-landing .chapter-heading { margin-bottom: 52px; }
+.presocraticos-landing .chapter-heading p { max-width: 360px; margin-bottom: 8px; color: var(--muted); font-size: 14px; }
+.presocraticos-landing .chapter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.presocraticos-landing .chapter-card { position: relative; min-height: 285px; padding: 29px 27px; border: 1px solid var(--line); background: rgba(255,255,255,.35); transition: transform .3s ease, border-color .3s ease, background .3s ease; }
+.presocraticos-landing .chapter-card:hover { border-color: rgba(198,164,106,.75); background: var(--white); transform: translateY(-5px); }
+.presocraticos-landing .chapter-icon { display: block; height: 47px; color: var(--gold-dark); font-family: var(--serif); font-size: 33px; }
+.presocraticos-landing .chapter-index { position: absolute; top: 29px; right: 27px; color: var(--muted); font-family: var(--mono); font-size: 10px; }
+.presocraticos-landing .chapter-card h3 { margin: 25px 0 9px; font-family: var(--serif); font-size: 23px; font-weight: 500; letter-spacing: -.03em; }
+.presocraticos-landing .chapter-card p { max-width: 220px; margin-bottom: 20px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.presocraticos-landing .card-line { position: absolute; bottom: 27px; left: 27px; width: 33px; height: 1px; background: var(--gold); }
+.presocraticos-landing .chapter-footer { display: flex; align-items: center; gap: 9px; margin-top: 35px; color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
+.presocraticos-landing .tiny-asterisk { color: var(--gold-dark); }
+
+.presocraticos-landing .editorial-section { background: #e9e1d4; }
+.presocraticos-landing .editorial-grid { display: grid; grid-template-columns: .96fr 1fr; align-items: center; gap: 98px; }
+.presocraticos-landing .editorial-visual { position: relative; }
+.presocraticos-landing .editorial-image { aspect-ratio: .91; background-position: center; background-size: cover; box-shadow: 22px 22px 0 rgba(141,107,57,.15); }
+.presocraticos-landing .editorial-caption { position: absolute; bottom: 24px; left: 24px; display: flex; flex-direction: column; color: var(--white); text-shadow: 0 2px 12px rgba(0,0,0,.4); }
+.presocraticos-landing .editorial-caption span { font-family: var(--serif); font-size: 40px; font-style: italic; line-height: 1; }
+.presocraticos-landing .editorial-caption small { margin-top: 5px; font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.presocraticos-landing .editorial-copy h2 { max-width: 560px; }
+.presocraticos-landing .editorial-copy > p { max-width: 530px; color: var(--muted); font-size: 15px; }
+.presocraticos-landing .benefit-list { display: grid; gap: 15px; margin: 32px 0 36px; }
+.presocraticos-landing .benefit-list > div { display: flex; align-items: flex-start; gap: 11px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.presocraticos-landing .benefit-list svg { flex: 0 0 auto; color: var(--gold-dark); margin-top: 2px; }
+.presocraticos-landing .benefit-list strong { color: var(--ink); font-weight: 800; }
+
+.presocraticos-landing .testimonials-section { background: var(--paper-light); }
+.presocraticos-landing .testimonial-heading { align-items: start; }
+.presocraticos-landing .testimonial-heading p { max-width: 315px; margin-top: 27px; color: var(--muted); font-size: 12px; }
+.presocraticos-landing .quote-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 15px; }
+.presocraticos-landing .quote-card { min-height: 265px; padding: 27px; border: 1px solid var(--line); background: var(--white); }
+.presocraticos-landing .quote-card svg { color: var(--gold-dark); }
+.presocraticos-landing .quote-card blockquote { margin: 23px 0 27px; font-family: var(--serif); font-size: 19px; line-height: 1.45; letter-spacing: -.02em; }
+.presocraticos-landing .featured-quote blockquote { font-size: 24px; }
+.presocraticos-landing .quote-source { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--line); padding-top: 15px; }
+.presocraticos-landing .quote-source strong { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+.presocraticos-landing .quote-source span { color: var(--muted); font-family: var(--mono); font-size: 8px; line-height: 1.5; text-transform: uppercase; }
+
+.presocraticos-landing .audience-section { padding: 115px 0; background: var(--ink-soft); color: var(--white); }
+.presocraticos-landing .audience-grid { display: grid; grid-template-columns: 1fr .82fr; gap: 130px; align-items: center; }
+.presocraticos-landing .audience-copy .section-kicker { color: var(--gold-bright); }
+.presocraticos-landing .audience-copy h2 { max-width: 585px; }
+.presocraticos-landing .audience-copy > p { max-width: 520px; margin-bottom: 32px; color: rgba(255,255,255,.56); }
+.presocraticos-landing .audience-points { display: grid; gap: 0; }
+.presocraticos-landing .audience-point { display: flex; gap: 17px; padding: 23px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+.presocraticos-landing .audience-point:first-child { border-top: 1px solid rgba(255,255,255,.15); }
+.presocraticos-landing .audience-point svg { color: var(--gold-bright); flex: 0 0 auto; margin-top: 2px; }
+.presocraticos-landing .audience-point strong { font-family: var(--serif); font-size: 19px; font-weight: 500; }
+.presocraticos-landing .audience-point p { margin: 4px 0 0; color: rgba(255,255,255,.48); font-size: 12px; line-height: 1.55; }
+
+.presocraticos-landing .faq-section { background: var(--paper-deep); }
+.presocraticos-landing .faq-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 100px; }
+.presocraticos-landing .faq-list { border-top: 1px solid var(--line); }
+.presocraticos-landing .faq-item { border-bottom: 1px solid var(--line); }
+.presocraticos-landing .faq-item button { display: flex; align-items: center; justify-content: space-between; width: 100%; border: 0; padding: 23px 0; background: transparent; color: var(--ink); font-size: 13px; font-weight: 800; text-align: left; }
+.presocraticos-landing .faq-item button svg { color: var(--gold-dark); transition: transform .25s ease; }
+.presocraticos-landing .faq-item.open button svg { transform: rotate(180deg); }
+.presocraticos-landing .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+.presocraticos-landing .faq-answer p { overflow: hidden; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.presocraticos-landing .faq-item.open .faq-answer { grid-template-rows: 1fr; }
+.presocraticos-landing .faq-item.open .faq-answer p { padding: 0 35px 22px 0; }
+
+.presocraticos-landing .final-cta { position: relative; background-position: center; background-size: cover; color: var(--white); }
+.presocraticos-landing .final-cta::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(198,164,106,.13), transparent 46%); }
+.presocraticos-landing .final-cta-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 125px 24px; text-align: center; }
+.presocraticos-landing .final-cta .section-kicker { color: var(--gold-bright); }
+.presocraticos-landing .final-cta h2 { margin: 17px 0; font-size: clamp(46px, 6vw, 74px); }
+.presocraticos-landing .final-cta p { max-width: 470px; margin-bottom: 31px; color: rgba(255,255,255,.65); }
+.presocraticos-landing .seal { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 114px; height: 114px; margin-bottom: 34px; border: 1px solid rgba(227,199,134,.7); border-radius: 50%; color: var(--gold-bright); }
+.presocraticos-landing .seal span { font-size: 15px; }
+.presocraticos-landing .seal strong { font-family: var(--serif); font-size: 13px; line-height: 1.05; }
+.presocraticos-landing .seal small { margin-top: 5px; color: rgba(255,255,255,.55); font-family: var(--mono); font-size: 7px; text-transform: uppercase; }
+.presocraticos-landing .cta-note { margin-top: 16px; color: rgba(255,255,255,.4); font-family: var(--mono); font-size: 8px; letter-spacing: .04em; }
+
+.presocraticos-landing .site-footer { padding: 33px 0 25px; background: #061420; color: var(--white); }
+.presocraticos-landing .footer-inner { display: flex; align-items: center; justify-content: space-between; width: min(1200px, calc(100% - 64px)); margin: 0 auto; }
+.presocraticos-landing .footer-meta { display: flex; gap: 22px; color: rgba(255,255,255,.42); font-family: var(--mono); font-size: 8px; text-transform: uppercase; }
+.presocraticos-landing .back-top { color: var(--gold-bright); font-family: var(--mono); font-size: 9px; text-transform: uppercase; }
+.presocraticos-landing .rights-note { width: min(1200px, calc(100% - 64px)); margin: 28px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.55); font-size: 10px; line-height: 1.6; }
+
+.presocraticos-landing .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+.presocraticos-landing .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .presocraticos-landing .header-inner, .presocraticos-landing .hero-inner, .presocraticos-landing .section-container, .presocraticos-landing .footer-inner { width: min(100% - 40px, 680px); }
+  .presocraticos-landing .header-inner { padding: 19px 0; }
+  .presocraticos-landing .menu-button { display: block; }
+  .presocraticos-landing .nav-links { position: absolute; top: 70px; right: 20px; left: 20px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px; border: 1px solid rgba(255,255,255,.13); background: rgba(9,25,39,.97); box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+  .presocraticos-landing .nav-links.open { display: flex; }
+  .presocraticos-landing .nav-links > a { padding: 13px 12px; }
+  .presocraticos-landing .nav-cta { justify-content: center; margin-top: 5px; }
+  .presocraticos-landing .hero-inner { grid-template-columns: 1fr; gap: 30px; padding-top: 145px; }
+  .presocraticos-landing .hero-section, .presocraticos-landing .hero-inner { min-height: auto; }
+  .presocraticos-landing .hero-section { padding-bottom: 70px; }
+  .presocraticos-landing .hero-product { min-height: 400px; }
+  .presocraticos-landing .book-mockup { width: 250px; }
+  .presocraticos-landing .edition-stamp { right: calc(50% - 170px); bottom: 45px; width: 98px; height: 98px; }
+  .presocraticos-landing .edition-stamp strong { font-size: 11px; }
+  .presocraticos-landing .orbit-one { width: 400px; }
+  .presocraticos-landing .statement-grid, .presocraticos-landing .editorial-grid, .presocraticos-landing .audience-grid, .presocraticos-landing .faq-grid { grid-template-columns: 1fr; gap: 44px; width: min(100% - 40px, 680px); }
+  .presocraticos-landing .section-rule { width: min(100% - 40px, 680px); margin-bottom: 58px; }
+  .presocraticos-landing .section-heading { align-items: start; flex-direction: column; gap: 18px; margin-bottom: 42px; }
+  .presocraticos-landing .chapter-grid { grid-template-columns: repeat(2, 1fr); }
+  .presocraticos-landing .quote-grid { grid-template-columns: 1fr; }
+  .presocraticos-landing .quote-card, .presocraticos-landing .featured-quote { min-height: unset; }
+  .presocraticos-landing .testimonial-heading p { margin-top: 0; }
+  .presocraticos-landing .footer-inner { align-items: flex-start; flex-wrap: wrap; gap: 24px; }
+  .presocraticos-landing .footer-meta { order: 3; width: 100%; }
+}
+
+@media (max-width: 520px) {
+  .presocraticos-landing { font-size: 14px; }
+  .presocraticos-landing .header-inner, .presocraticos-landing .hero-inner, .presocraticos-landing .section-container, .presocraticos-landing .footer-inner { width: calc(100% - 34px); }
+  .presocraticos-landing .brand strong { font-size: 11px; }
+  .presocraticos-landing .brand small { font-size: 7px; }
+  .presocraticos-landing h1 { font-size: 48px; }
+  .presocraticos-landing .hero-lead { font-size: 14px; }
+  .presocraticos-landing .hero-actions { align-items: flex-start; flex-direction: column; gap: 17px; }
+  .presocraticos-landing .hero-proof { align-items: flex-start; max-width: 280px; margin-top: 34px; }
+  .presocraticos-landing .hero-product { min-height: 365px; }
+  .presocraticos-landing .book-mockup { width: 220px; }
+  .presocraticos-landing .book-cover { padding: 28px 18px 22px; }
+  .presocraticos-landing .book-cover h2 { font-size: 28px; }
+  .presocraticos-landing .edition-stamp { right: calc(50% - 145px); bottom: 39px; }
+  .presocraticos-landing .statement-section, .presocraticos-landing .chapters-section, .presocraticos-landing .editorial-section, .presocraticos-landing .testimonials-section, .presocraticos-landing .audience-section, .presocraticos-landing .faq-section { padding: 83px 0; }
+  .presocraticos-landing .statement-grid, .presocraticos-landing .editorial-grid, .presocraticos-landing .audience-grid, .presocraticos-landing .faq-grid { width: calc(100% - 34px); }
+  .presocraticos-landing .section-rule { width: calc(100% - 34px); margin-bottom: 43px; }
+  .presocraticos-landing .statement-grid h2, .presocraticos-landing .section-heading h2, .presocraticos-landing .editorial-copy h2, .presocraticos-landing .audience-copy h2, .presocraticos-landing .faq-grid h2 { font-size: 40px; }
+  .presocraticos-landing .statement-lead { font-size: 19px; }
+  .presocraticos-landing .chapter-grid { grid-template-columns: 1fr; }
+  .presocraticos-landing .chapter-card { min-height: 240px; }
+  .presocraticos-landing .author-row { grid-template-columns: 42px 1fr 24px; gap: 8px; }
+  .presocraticos-landing .author-note { display: none; }
+  .presocraticos-landing .author-name { font-size: 17px; }
+  .presocraticos-landing .editorial-image { aspect-ratio: .8; }
+  .presocraticos-landing .featured-quote blockquote { font-size: 22px; }
+  .presocraticos-landing .final-cta-inner { padding: 90px 17px; }
+  .presocraticos-landing .final-cta h2 { font-size: 48px; }
+  .presocraticos-landing .footer-inner { width: calc(100% - 34px); }
+  .presocraticos-landing .footer-meta { flex-direction: column; gap: 5px; }
+  .presocraticos-landing .rights-note { width: calc(100% - 34px); }
+}

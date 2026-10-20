@@ -65,3 +65,9 @@ Para validar tipos e build, use `pnpm check` e `pnpm build` num ambiente com dep
 A página de vendas de **A Tríade do Tempo**, de Christian Barbosa, está disponível na rota `/triade-do-tempo`. A nova entrada também aparece no catálogo da DigitalQuintino, sem substituir a home, os demais produtos ou o painel `/admin`.
 
 O botão de compra encaminha para o checkout Kiwify informado pelo produtor. A capa usada na página e no catálogo fica em `client/public/assets/triade-do-tempo-cover.webp`; a copy para cadastro na Hotmart está em `products/a-triade-do-tempo/hotmart-copy.md`. O PDF original não faz parte do repositório.
+
+## Nova página: Os Pré-Socráticos
+
+A landing page cinematográfica de **Os Pré-Socráticos** está disponível na rota `/os-presocraticos` e também foi adicionada ao catálogo principal. A página usa as imagens locais `client/public/assets/ebook-hero.webp` e `client/public/assets/ebook-cover-promo.webp`, para funcionar sem hotlinks externos. A copy para cadastro na Hotmart está em `products/os-presocraticos/hotmart-copy.md`.
+
+O PDF integral não foi incluído neste repositório público porque o arquivo informa copyright e direitos exclusivos da edição de 1996. Ele pode ser adicionado posteriormente mediante confirmação de autorização para distribuição pública.

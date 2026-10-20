@@ -3,6 +3,20 @@ const STORAGE = "/assets/";
 export const products = [
   {
     tag: "NOVA LEITURA",
+    category: "FILOSOFIA · HISTÓRIA DAS IDEIAS",
+    title: "Os Pré-Socráticos",
+    description:
+      "Uma jornada pelos pensadores que trocaram o mito pela investigação e abriram o primeiro capítulo da filosofia ocidental.",
+    bullets: ["Fragmentos, doxografia e comentários", "Tales, Heráclito, Parmênides e outros autores", "Leitura digital com acesso pela Hotmart"],
+    image: `${STORAGE}ebook-cover-promo.webp`,
+    imageClass: "portrait",
+    panel: "midnight",
+    href: "/os-presocraticos",
+    message:
+      "Olá! Quero conhecer o e-book Os Pré-Socráticos. Vi na DigitalQuintino e gostaria de receber ajuda.",
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "COMUNICAÇÃO · RELACIONAMENTOS",
     title: "Como Fazer Amigos e Influenciar Pessoas",
     description:
