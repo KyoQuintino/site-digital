@@ -69,6 +69,12 @@ A landing page cinematográfica de **Os Pré-Socráticos** está disponível na 
 
 O PDF integral não foi incluído neste repositório público porque o arquivo informa copyright e direitos exclusivos da edição de 1996. Ele pode ser adicionado posteriormente mediante confirmação de autorização para distribuição pública.
 
+## Novo e-book: PNL — O segredo das pessoas bem-sucedidas
+
+O e-book de **Paul Lydon** foi adicionado ao catálogo principal com a capa local `client/public/assets/pnl-o-segredo-das-pessoas-bem-sucedidas.png`, os dados editoriais e a copy de cadastro em `products/pnl-o-segredo-das-pessoas-bem-sucedidas/hotmart-copy.md`. O checkout usa o link informado: `https://go.hotmart.com/M108123748P`.
+
+O PDF integral não foi incluído no repositório público; a entrega do arquivo ocorre conforme a configuração da oferta na Hotmart.
+
 ## Nova página: 101 Sucos Detox
 
 A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, está disponível em `/101-sucos-detox` como página estática. Ela preserva o catálogo principal e usa arquivos locais em `client/public/101-sucos-detox/`. Os CTAs apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/p7Zu3B7`.

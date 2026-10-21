@@ -3,6 +3,45 @@ const STORAGE = "/assets/";
 export const products = [
   {
     tag: "NOVA LEITURA",
+    category: "DESENVOLVIMENTO PESSOAL · PNL",
+    title: "PNL: O segredo das pessoas bem-sucedidas",
+    description:
+      "Um guia introdutório à Programação Neurolinguística, com reflexões sobre comunicação, crenças, emoções e padrões do cotidiano.",
+    bullets: [
+      "15 capítulos organizados por temas",
+      "Exercícios práticos para acompanhar a leitura",
+      "E-book em PDF com checkout pela Hotmart",
+    ],
+    image: `${STORAGE}pnl-o-segredo-das-pessoas-bem-sucedidas.png`,
+    imageClass: "portrait",
+    panel: "midnight",
+    href: "https://go.hotmart.com/M108123748P",
+    message:
+      "Olá! Quero saber mais sobre o e-book “PNL: O segredo das pessoas bem-sucedidas”, de Paul Lydon. Vi na DigitalQuintino e gostaria de receber ajuda para finalizar meu pedido.",
+    details: {
+      subtitle: "Entenda seus padrões. Escolha como seguir.",
+      author: "Paul Lydon",
+      gallery: [`${STORAGE}pnl-o-segredo-das-pessoas-bem-sucedidas.png`],
+      takeaways: [
+        "Conhecer conceitos introdutórios de PNL e comportamento",
+        "Refletir sobre comunicação, escuta e rapport",
+        "Observar crenças e hábitos que influenciam escolhas",
+        "Explorar emoções, lembranças e o conceito de ancoragem",
+        "Relacionar os temas a objetivos pessoais e ao contexto profissional",
+      ],
+      chapters: [
+        "PNL e comportamento",
+        "Comunicação e rapport",
+        "Crenças e hábitos",
+        "Emoções e lembranças",
+        "Ancoragem e prática",
+        "Objetivos e contexto profissional",
+        "Mais capítulos organizados por temas",
+      ],
+    },
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "REFLEXÕES · FILOSOFIA DE VIDA",
     title: "Viver em Paz para Morrer em Paz",
     description:
