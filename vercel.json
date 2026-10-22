@@ -30,6 +30,14 @@
       "destination": "/por-que-fazemos-o-que-fazemos/index.html"
     },
     {
+      "source": "/viver-em-paz-para-morrer-em-paz",
+      "destination": "/viver-em-paz-para-morrer-em-paz/index.html"
+    },
+    {
+      "source": "/viver-em-paz-para-morrer-em-paz/",
+      "destination": "/viver-em-paz-para-morrer-em-paz/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

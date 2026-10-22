@@ -98,7 +98,7 @@ export const products = [
     image: `${STORAGE}viver-em-paz-para-morrer-em-paz-lite.webp`,
     imageClass: "portrait",
     panel: "warm",
-    href: "https://go.hotmart.com/U108118072R",
+    href: "/viver-em-paz-para-morrer-em-paz/",
     message:
       "Olá! Quero saber mais sobre o e-book “Viver em Paz para Morrer em Paz”, de Mario Sergio Cortella. Vi na DigitalQuintino e gostaria de receber ajuda para finalizar meu pedido.",
   },

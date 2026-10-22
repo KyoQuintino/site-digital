@@ -98,3 +98,10 @@ A landing independente de **Por Que Fazemos o Que Fazemos?**, de Mario Sergio Co
 ## Nova página: Liderança com Propósitos
 
 A landing de **Liderança com Propósitos**, de Rick Warren, está disponível em `/lideranca-com-propositos/` e foi incluída no catálogo da vitrine. A página usa imagens WebP locais em `client/public/assets/`, com a capa e a arte promocional final. O checkout informado é `https://pay.hotmart.com/J108122629V`; pagamento, preço e condições são tratados na Hotmart. A copy de cadastro está em `products/lideranca-com-propositos/hotmart-copy.md`. O PDF integral não foi incluído neste repositório público; os depoimentos continuam como espaços reservados e o selo é editorial, sem alegação de garantia ou certificação.
+
+
+## Nova página: Viver em Paz para Morrer em Paz
+
+A landing de **Viver em Paz para Morrer em Paz**, de Mario Sergio Cortella, fica em `/viver-em-paz-para-morrer-em-paz/` e está conectada ao card já existente no catálogo. O CTA principal leva ao checkout informado: `https://pay.hotmart.com/U108118072R`. A página usa as artes promocionais locais em WebP (`client/public/assets/viver-em-paz-capa-promocional-lite.webp` e `client/public/assets/viver-em-paz-banner-divulgacao-lite.webp`); as regras de rota estão em `vercel.json`.
+
+A copy para cadastrar na Hotmart está em `products/viver-em-paz-para-morrer-em-paz/hotmart-copy.md`. O PDF integral não foi incluído no repositório público. A seção de depoimentos mantém espaços reservados para avaliações reais autorizadas, e o selo da página é editorial, sem alegar certificação ou garantia.
