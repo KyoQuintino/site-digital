@@ -23,7 +23,7 @@ pnpm check
 pnpm build
 ```
 
-O projeto inclui a página de catálogo, o painel `/admin`, as landings documentadas neste README, componentes, estilos, configurações e recursos visuais para a coleção de 29 e-books. `node_modules`, `.git`, logs internos e artefatos temporários foram omitidos para manter o download leve e reproduzível.
+O projeto inclui a página de catálogo, o painel `/admin`, as landings documentadas neste README, componentes, estilos, configurações e recursos visuais para a coleção de 30 e-books. `node_modules`, `.git`, logs internos e artefatos temporários foram omitidos para manter o download leve e reproduzível.
 
 ## Atualizações desta edição focada em conversão
 
@@ -93,3 +93,8 @@ A landing page de **Limite Zero**, de Joe Vitale e Ihaleakala Hew Len, está dis
 ## Nova página: Por Que Fazemos o Que Fazemos?
 
 A landing independente de **Por Que Fazemos o Que Fazemos?**, de Mario Sergio Cortella, está em `/por-que-fazemos-o-que-fazemos/` e também entrou no catálogo. A página usa WebP otimizados em `client/public/assets/`; os PNG originais ficam em `products/por-que-fazemos-o-que-fazemos/`. Contém metadados sociais e espaços reservados para depoimentos autênticos e selo decorativo. A copy sugerida para cadastro está em `products/por-que-fazemos-o-que-fazemos/hotmart-copy.md`. O botão da Hotmart permanece desativado até ser configurado o link oficial/autorizado da oferta; a arte é conceitual, não reproduz a capa editorial e não representa endosso do autor ou da editora.
+
+
+## Nova página: Liderança com Propósitos
+
+A landing de **Liderança com Propósitos**, de Rick Warren, está disponível em `/lideranca-com-propositos/` e foi incluída no catálogo da vitrine. A página usa imagens WebP locais em `client/public/assets/`, com a capa e a arte promocional final. O checkout informado é `https://pay.hotmart.com/J108122629V`; pagamento, preço e condições são tratados na Hotmart. A copy de cadastro está em `products/lideranca-com-propositos/hotmart-copy.md`. O PDF integral não foi incluído neste repositório público; os depoimentos continuam como espaços reservados e o selo é editorial, sem alegação de garantia ou certificação.

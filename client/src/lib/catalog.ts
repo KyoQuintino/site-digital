@@ -3,6 +3,50 @@ const STORAGE = "/assets/";
 export const products = [
   {
     tag: "NOVA LEITURA",
+    category: "LIDERANÇA · FÉ E PROPÓSITO",
+    title: "Liderança com Propósitos",
+    description:
+      "Uma leitura de Rick Warren sobre a formação do líder, a oração, os planos, a motivação de pessoas e os desafios de conduzir projetos a partir da história de Neemias.",
+    bullets: [
+      "12 capítulos sobre princípios de liderança inspirados em Neemias",
+      "Perguntas para reflexão e aplicação ao final de cada capítulo",
+      "E-book digital com pagamento pelo checkout oficial da Hotmart",
+    ],
+    image: `${STORAGE}lideranca-com-propositos-capa.webp`,
+    imageClass: "portrait",
+    panel: "midnight",
+    href: "/lideranca-com-propositos/",
+    message:
+      "Olá! Quero saber mais sobre o e-book Liderança com Propósitos, de Rick Warren. Vi na DigitalQuintino e gostaria de receber ajuda.",
+    details: {
+      subtitle: "Princípios eficazes para o líder no século XXI.",
+      author: "Rick Warren",
+      gallery: [`${STORAGE}lideranca-com-propositos-capa.webp`],
+      takeaways: [
+        "Refletir sobre a formação, o caráter e a vida de oração de quem lidera",
+        "Transformar visão em planos e organizar projetos com propósito",
+        "Motivar pessoas, enfrentar oposição e buscar caminhos para resolver conflitos",
+        "Reconhecer tentações e pensar em formas de manter uma liderança consistente",
+        "Usar as perguntas ao final dos capítulos para refletir e aplicar os princípios apresentados",
+      ],
+      chapters: [
+        "A formação de um líder",
+        "A oração de um líder",
+        "Os planos de um líder",
+        "Como um líder motiva outros",
+        "Como um líder organiza um projeto",
+        "Como um líder enfrenta seus opositores",
+        "Como um líder resolve os conflitos",
+        "As tentações da liderança",
+        "Os segredos dos bem-sucedidos",
+        "Como os líderes mantêm o sucesso",
+        "O que é preciso para ser um grande líder",
+        "Epílogo: como Neemias liderou ao estilo de Jesus, o líder dos líderes",
+      ],
+    },
+  },
+  {
+    tag: "NOVA LEITURA",
     category: "DESENVOLVIMENTO PESSOAL · PNL",
     title: "PNL: O segredo das pessoas bem-sucedidas",
     description:
