@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f6f2e9" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f8f5ee" />
     <meta name="description" content="Explore os e-books da DigitalQuintino, incluindo 40 Dias com Deus: uma jornada devocional com versículos bíblicos, reflexões, orações e desafios práticos." />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#182b25" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="DigitalQuintino" />
@@ -17,12 +17,19 @@
     <meta name="twitter:description" content="Conheça 40 Dias com Deus e encontre sua próxima leitura entre os e-books DigitalQuintino." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>DigitalQuintino | E-books para viver com propósito</title>
+    <script>
+      (() => {
+        let savedTheme = null;
+        try { savedTheme = localStorage.getItem("theme"); } catch { /* Storage may be unavailable. */ }
+        const systemPrefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
+        const darkMode = savedTheme === "dark" || (savedTheme !== "light" && systemPrefersDark);
+        document.documentElement.classList.toggle("dark", darkMode);
+        document.documentElement.style.colorScheme = darkMode ? "dark" : "light";
+      })();
+    </script>
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Store","name":"DigitalQuintino","description":"Coleção digital de e-books sobre desenvolvimento pessoal, fé, família e relacionamentos.","currenciesAccepted":"BRL","paymentAccepted":["Hotmart","Kiwify"]}
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>

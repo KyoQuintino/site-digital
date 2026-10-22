@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import "./ComoFazerAmigos.css";
 
 const checkoutUrl = "https://pay.kiwify.com.br/MQpLgSg";
-const coverImage = "/assets/como-fazer-amigos-e-influenciar-pessoas.png";
+const coverImage = "/assets/como-fazer-amigos-e-influenciar-pessoas-lite.webp";
 
 const benefits = [
   { icon: MessageCircle, title: "Conversas que aproximam", text: "Aprenda a ouvir melhor, fazer perguntas mais interessantes e deixar a conversa fluir com naturalidade." },

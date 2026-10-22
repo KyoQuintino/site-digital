@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 
 const HOTMART_URL = "https://hotmart.com/";
-const HERO_IMAGE = "/assets/ebook-hero.webp";
-const COVER_IMAGE = "/assets/ebook-cover-promo.webp";
+const HERO_IMAGE = "/assets/ebook-hero-lite.webp";
+const COVER_IMAGE = "/assets/ebook-cover-promo-lite.webp";
 
 const philosophers = [
   { name: "Tales de Mileto", note: "A pergunta pelo princípio" },

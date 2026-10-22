@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import "./TriadeDoTempo.css";
 
-const coverImage = "/assets/triade-do-tempo-cover.webp";
+const coverImage = "/assets/triade-do-tempo-cover-lite.webp";
 const kiwifyCheckoutUrl = "https://pay.kiwify.com.br/geaafqF";
 
 const steps = [

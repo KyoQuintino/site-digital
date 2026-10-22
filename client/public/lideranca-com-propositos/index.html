@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#101a23" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f6f3ee" />
     <meta name="description" content="Conheça os princípios de Rick Warren sobre liderança bíblica inspirados em Neemias: caráter, oração, planejamento, conflitos e influência." />
     <meta name="keywords" content="liderança cristã, liderança bíblica, Rick Warren, Neemias, desenvolvimento de líderes" />
     <meta property="og:type" content="product" />
@@ -11,9 +12,16 @@
     <meta property="og:description" content="Princípios de liderança de Rick Warren a partir da trajetória de Neemias: caráter, oração, visão e influência." />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Liderança com Propósitos | Rick Warren</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      (() => {
+        let savedTheme = null;
+        try { savedTheme = localStorage.getItem("theme"); } catch { /* Storage may be unavailable. */ }
+        const prefersDark = typeof window.matchMedia === "function" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const darkMode = savedTheme === "dark" || (savedTheme !== "light" && prefersDark);
+        document.documentElement.classList.toggle("dark", darkMode);
+        document.documentElement.style.colorScheme = darkMode ? "dark" : "light";
+      })();
+    </script>
     <link rel="stylesheet" href="/lideranca-com-propositos/styles.css" />
     <script src="/lideranca-com-propositos/product-config.js"></script>
   </head>
@@ -28,6 +36,10 @@
         <a href="#conteudo">Conteúdo</a>
         <a href="#depoimentos">Depoimentos</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false" title="Ativar modo escuro">
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z" /></svg>
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+      </button>
       <a class="button button-nav" data-hotmart-link href="https://pay.hotmart.com/J108122629V" target="_blank" rel="noopener noreferrer">Ver oferta <span aria-hidden="true">↗</span></a>
     </header>
 
@@ -59,7 +71,7 @@
         </div>
         <figure class="cover-frame">
           <span class="cover-stamp">LEITURA<br />EM FOCO</span>
-          <img src="/assets/lideranca-com-propositos-capa.webp" alt="Capa cinematográfica de Liderança com Propósitos, de Rick Warren" />
+          <img src="/assets/lideranca-com-propositos-capa-lite.webp" alt="Capa cinematográfica de Liderança com Propósitos, de Rick Warren" loading="lazy" decoding="async" />
           <figcaption>Uma reflexão sobre a formação do líder e a influência que exerce.</figcaption>
         </figure>
       </section>
@@ -95,7 +107,7 @@
 
       <section class="reader-section section-wrap">
         <div class="reader-visual">
-          <img src="/assets/lideranca-com-propositos-capa.webp" alt="Representação visual do e-book sobre liderança e Neemias" loading="lazy" />
+          <img src="/assets/lideranca-com-propositos-capa-lite.webp" alt="Representação visual do e-book sobre liderança e Neemias" loading="lazy" decoding="async" />
           <div class="editorial-seal"><span class="seal-top">E-BOOK</span><span class="seal-icon" aria-hidden="true">✳</span><span class="seal-bottom">12 CAPÍTULOS</span></div>
         </div>
         <div class="reader-copy">
@@ -148,6 +160,27 @@
       <p>Material de apresentação do e-book de Rick Warren. Consulte a oferta oficial para confirmar preço, formato, acesso e condições.</p>
       <a href="#inicio" class="back-top">Voltar ao início ↑</a>
     </footer>
-
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector(".theme-toggle");
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        const applyTheme = (theme) => {
+          const darkMode = theme === "dark";
+          root.classList.toggle("dark", darkMode);
+          root.style.colorScheme = theme;
+          if (button) {
+            const label = darkMode ? "Ativar modo claro" : "Ativar modo escuro";
+            button.setAttribute("aria-pressed", String(darkMode));
+            button.setAttribute("aria-label", label);
+            button.title = label;
+          }
+          themeColor?.setAttribute("content", darkMode ? "#111914" : "#f6f3ee");
+          try { localStorage.setItem("theme", theme); } catch { /* Theme remains available for this page. */ }
+        };
+        applyTheme(root.classList.contains("dark") ? "dark" : "light");
+        button?.addEventListener("click", () => applyTheme(root.classList.contains("dark") ? "light" : "dark"));
+      })();
+    </script>
   </body>
 </html>

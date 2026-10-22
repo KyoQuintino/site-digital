@@ -203,7 +203,12 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+// Editor instrumentation is useful in local preview but must never ship to production.
+const developmentPlugins = process.env.NODE_ENV === "production"
+  ? []
+  : [jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+
+const plugins = [react(), tailwindcss(), ...developmentPlugins, vitePluginStorageProxy()];
 
 export default defineConfig({
   plugins,

@@ -12,6 +12,7 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 import { getCoverSource, loadCoverOverrides, type CoverOverrides } from "@/lib/coverOverrides";
 import { products, type Product } from "@/lib/catalog";
 
@@ -72,7 +73,7 @@ function QuickViewModal({ product, onClose, coverOverrides }: { product: Product
           {details && <>
             <p className="quick-view-subtitle">{details.subtitle}</p>
             <p className="quick-view-author"><strong>Autor:</strong> {details.author}</p>
-            {"gallery" in details && details.gallery && <div className="quick-view-gallery">{details.gallery.map((image, index) => <img key={image} src={image} alt={`${product.title} — imagem ${index + 1}`} />)}</div>}
+            {"gallery" in details && details.gallery && <div className="quick-view-gallery">{details.gallery.map((image, index) => <img key={image} src={image} alt={`${product.title} — imagem ${index + 1}`} loading="lazy" decoding="async" />)}</div>}
           </>}
           <div className="quick-view-actions"><a className="button button-coral" href={product.href} target="_blank" rel="noreferrer">Conhecer o e-book <ArrowRight size={15} /></a><button className="button button-outline" type="button" onClick={onClose}>Continuar explorando</button></div>
         </div>
@@ -89,7 +90,7 @@ function ProductCard({ product, onQuickView, coverOverrides }: { product: Produc
     <article className="product-card">
       <div className={`card-visual ${product.panel}`}>
         <span className="card-tag">{product.tag}</span><span className="digital-badge">E-book Digital</span>
-        <img className={`card-cover ${product.imageClass}`} src={cover} alt={`Mockup de ${product.title}`} />
+        <img className={`card-cover ${product.imageClass}`} src={cover} alt={`Mockup de ${product.title}`} loading="lazy" decoding="async" />
       </div>
       <div className="card-body">
         <span className="eyebrow">{product.category}</span>
@@ -106,7 +107,7 @@ function ProductCard({ product, onQuickView, coverOverrides }: { product: Produc
             <div className="product-more-body">
               <p className="product-subtitle">{product.details.subtitle}</p>
               <p><strong>Autor:</strong> {product.details.author}</p>
-              {"gallery" in product.details && product.details.gallery && <div className="product-gallery">{product.details.gallery.map((image, index) => <img key={`${image}-${index}`} src={image} alt={`${product.title} — imagem editorial ${index + 1}`} />)}</div>}
+              {"gallery" in product.details && product.details.gallery && <div className="product-gallery">{product.details.gallery.map((image, index) => <img key={`${image}-${index}`} src={image} alt={`${product.title} — imagem editorial ${index + 1}`} loading="lazy" decoding="async" />)}</div>}
               <span className="product-more-label">O que você leva</span>
               <ul>{product.details.takeaways.map((item) => <li key={item}><Check size={12} /> {item}</li>)}</ul>
               <span className="product-more-label">Capítulos</span>
@@ -141,7 +142,7 @@ function PopularShelf({ onQuickView, coverOverrides }: { onQuickView: (product: 
         {popular.map((product, index) => (
           <div className={`popular-card ${product.title.startsWith("Mindset") ? "popular-card-featured" : ""}`} key={product.title}>
             <span className="popular-rank">0{index + 1}</span>
-            <div className={`popular-art ${product.panel}`}><img src={getCoverSource(product.title, product.image, coverOverrides)} alt={`Capa de ${product.title}`} /></div>
+            <div className={`popular-art ${product.panel}`}><img src={getCoverSource(product.title, product.image, coverOverrides)} alt={`Capa de ${product.title}`} loading="lazy" decoding="async" /></div>
             <div className="popular-info"><span className="eyebrow">{product.category}</span><strong>{product.title}</strong><button type="button" onClick={() => onQuickView(product)}>Ver detalhes <ArrowRight size={13} /></button></div>
           </div>
         ))}
@@ -168,17 +169,17 @@ function Testimonials() {
 }
 
 function HeroArt({ coverOverrides }: { coverOverrides: CoverOverrides }) {
-  const antimedoCover = getCoverSource("Antimedo", `${STORAGE}antimedo-enviado_072f517e.webp`, coverOverrides);
-  const codigoCover = getCoverSource("O Código Secreto da Mente Masculina", `${STORAGE}codigo-mente-masculina_c180a497.webp`, coverOverrides);
+  const antimedoCover = getCoverSource("Antimedo", `${STORAGE}antimedo-enviado_072f517e-lite.webp`, coverOverrides);
+  const codigoCover = getCoverSource("O Código Secreto da Mente Masculina", `${STORAGE}codigo-mente-masculina_c180a497-lite.webp`, coverOverrides);
   return (
     <div className="hero-art" aria-label="Capas em destaque da coleção">
       <div className="hero-orb" />
       <span className="hero-note note-one">feito para você <Heart size={12} fill="currentColor" /></span>
       <div className="hero-book-back" aria-label="Capa do e-book Antimedo">
-        <img className="hero-book-image" src={antimedoCover} alt="Capa do e-book Antimedo" />
+        <img className="hero-book-image" src={antimedoCover} alt="Capa do e-book Antimedo" width="800" height="1200" decoding="async" />
       </div>
       <div className="hero-book-front" aria-label="Capa do e-book O Código Secreto da Mente Masculina">
-        <img className="hero-book-image" src={codigoCover} alt="Capa do e-book O Código Secreto da Mente Masculina" />
+        <img className="hero-book-image" src={codigoCover} alt="Capa do e-book O Código Secreto da Mente Masculina" width="800" height="1200" fetchPriority="high" decoding="async" />
       </div>
       <span className="hero-note note-two">leitura com propósito <Sparkles size={12} /></span>
     </div>
@@ -281,6 +282,7 @@ export default function Home() {
           {searchTerm && <button type="button" aria-label="Limpar busca" onClick={() => setSearchTerm("")}>×</button>}
         </form>
         <a className="header-contact" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} /> Falar com a gente</a>
+        <ThemeToggle />
         <button className="menu-button" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((value) => !value)}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
 
@@ -306,7 +308,7 @@ export default function Home() {
       <section className="forty-day-feature section-shell" id="40-dias" aria-labelledby="forty-day-title">
         <div className="forty-day-art">
           <span className="forty-day-art-label">UMA JORNADA · UM DIA DE CADA VEZ</span>
-          <img src={`${STORAGE}40-dias-com-deus-capa.webp`} alt="Capa do e-book 40 Dias com Deus: A jornada para um Novo Eu em Cristo" />
+          <img src={`${STORAGE}40-dias-com-deus-capa.webp`} alt="Capa do e-book 40 Dias com Deus: A jornada para um Novo Eu em Cristo" loading="lazy" decoding="async" />
           <span className="forty-day-art-caption">Versículos · reflexão · oração</span>
         </div>
         <div className="forty-day-copy">
@@ -324,11 +326,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="featured-book section-shell" aria-labelledby="featured-book-title"><div className="featured-book-art"><img src={`${STORAGE}codigo-mente-masculina_c180a497.webp`} alt="Capa de O Código Secreto da Mente Masculina" /></div><div className="featured-book-copy"><span className="eyebrow">DESTAQUE DA COLEÇÃO</span><h2 id="featured-book-title">O Código Secreto da <em>Mente Masculina.</em></h2><p>Um guia cristão, prático e sensível para mulheres que desejam restaurar diálogo, confiança e parceria no casamento.</p><div className="featured-book-meta"><span>49 páginas</span><span>7 capítulos</span><span>Plano de 30 dias</span></div><a className="button button-dark" href="https://go.hotmart.com/H107627067J" target="_blank" rel="noreferrer">Conhecer o e-book <ArrowRight size={15} /></a></div></section>
+      <section className="featured-book section-shell" aria-labelledby="featured-book-title"><div className="featured-book-art"><img src={`${STORAGE}codigo-mente-masculina_c180a497-lite.webp`} alt="Capa de O Código Secreto da Mente Masculina" loading="lazy" decoding="async" /></div><div className="featured-book-copy"><span className="eyebrow">DESTAQUE DA COLEÇÃO</span><h2 id="featured-book-title">O Código Secreto da <em>Mente Masculina.</em></h2><p>Um guia cristão, prático e sensível para mulheres que desejam restaurar diálogo, confiança e parceria no casamento.</p><div className="featured-book-meta"><span>49 páginas</span><span>7 capítulos</span><span>Plano de 30 dias</span></div><a className="button button-dark" href="https://go.hotmart.com/H107627067J" target="_blank" rel="noreferrer">Conhecer o e-book <ArrowRight size={15} /></a></div></section>
 
       <section className="quote-section"><div className="quote-mark">“</div><blockquote>Livros não precisam gritar para transformar. Às vezes, basta uma página certa no momento certo.</blockquote><div className="quote-by"><span /> CURADORIA DIGITALQUINTINO</div></section>
 
-      <section className="offer-section section-shell"><div className="offer-copy"><span className="eyebrow">SEU PRÓXIMO COMEÇO</span><h2>O que você quer cultivar <em>hoje?</em></h2><p>Selecione um dos e-books e siga para o checkout. Se preferir, envie uma mensagem — vamos ajudar você a escolher.</p><div className="hero-actions"><a className="button button-dark" href="https://go.hotmart.com/P107153571O" target="_blank" rel="noreferrer">Comprar “Ensinando a Criança a Orar” <ArrowRight size={15} /></a><a className="button button-outline" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} /> Pedir ajuda no WhatsApp</a></div></div><div className="offer-card"><span>MAIS ESCOLHIDO ESTA SEMANA</span><img src={`${STORAGE}orar_330d0d6f.webp`} alt="Ensinando a Criança a Orar" /><strong>Ensinando a Criança a Orar</strong><small>Pagamento único · acesso vitalício</small></div></section>
+      <section className="offer-section section-shell"><div className="offer-copy"><span className="eyebrow">SEU PRÓXIMO COMEÇO</span><h2>O que você quer cultivar <em>hoje?</em></h2><p>Selecione um dos e-books e siga para o checkout. Se preferir, envie uma mensagem — vamos ajudar você a escolher.</p><div className="hero-actions"><a className="button button-dark" href="https://go.hotmart.com/P107153571O" target="_blank" rel="noreferrer">Comprar “Ensinando a Criança a Orar” <ArrowRight size={15} /></a><a className="button button-outline" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} /> Pedir ajuda no WhatsApp</a></div></div><div className="offer-card"><span>MAIS ESCOLHIDO ESTA SEMANA</span><img src={`${STORAGE}orar_330d0d6f.webp`} alt="Ensinando a Criança a Orar" loading="lazy" decoding="async" /><strong>Ensinando a Criança a Orar</strong><small>Pagamento único · acesso vitalício</small></div></section>
 
       <LeadCapture />
       {quickViewProduct && <QuickViewModal product={quickViewProduct} coverOverrides={coverOverrides} onClose={() => setQuickViewProduct(null)} />}

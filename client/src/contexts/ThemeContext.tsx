@@ -16,36 +16,48 @@ interface ThemeProviderProps {
   switchable?: boolean;
 }
 
+function getInitialTheme(defaultTheme: Theme, switchable: boolean): Theme {
+  if (!switchable || typeof window === "undefined") return defaultTheme;
+
+  try {
+    const stored = window.localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") return stored;
+  } catch {
+    // Local storage can be disabled; the system preference still provides a useful default.
+  }
+
+  const prefersDark = typeof window.matchMedia === "function"
+    && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return prefersDark ? "dark" : defaultTheme;
+}
+
 export function ThemeProvider({
   children,
   defaultTheme = "light",
   switchable = false,
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (switchable) {
-      const stored = localStorage.getItem("theme");
-      return (stored as Theme) || defaultTheme;
-    }
-    return defaultTheme;
-  });
+  const [theme, setTheme] = useState<Theme>(() => getInitialTheme(defaultTheme, switchable));
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    root.classList.toggle("dark", theme === "dark");
+    root.style.colorScheme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+      "content",
+      theme === "dark" ? "#111914" : "#f8f5ee",
+    );
 
     if (switchable) {
-      localStorage.setItem("theme", theme);
+      try {
+        window.localStorage.setItem("theme", theme);
+      } catch {
+        // Theme switching remains available for this page even if storage is unavailable.
+      }
     }
   }, [theme, switchable]);
 
   const toggleTheme = switchable
-    ? () => {
-        setTheme(prev => (prev === "light" ? "dark" : "light"));
-      }
+    ? () => setTheme((previous) => (previous === "light" ? "dark" : "light"))
     : undefined;
 
   return (
