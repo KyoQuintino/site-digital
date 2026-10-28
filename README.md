@@ -102,6 +102,6 @@ A landing de **Liderança com Propósitos**, de Rick Warren, está disponível e
 
 ## Nova página: Viver em Paz para Morrer em Paz
 
-A landing de **Viver em Paz para Morrer em Paz**, de Mario Sergio Cortella, fica em `/viver-em-paz-para-morrer-em-paz/` e está conectada ao card já existente no catálogo. O CTA principal leva ao checkout informado: `https://pay.hotmart.com/U108118072R`. A página usa as artes promocionais locais em WebP (`client/public/assets/viver-em-paz-capa-promocional-lite.webp` e `client/public/assets/viver-em-paz-banner-divulgacao-lite.webp`); as regras de rota estão em `vercel.json`.
+A landing de **Viver em Paz para Morrer em Paz**, de Mario Sergio Cortella, fica em `/viver-em-paz-para-morrer-em-paz/` e está conectada ao card já existente no catálogo. O CTA principal leva ao checkout informado: `https://pay.hotmart.com/C108118040T`. A página usa as artes promocionais locais em WebP (`client/public/assets/viver-em-paz-capa-promocional-lite.webp` e `client/public/assets/viver-em-paz-banner-divulgacao-lite.webp`); as regras de rota estão em `vercel.json`.
 
 A copy para cadastrar na Hotmart está em `products/viver-em-paz-para-morrer-em-paz/hotmart-copy.md`. O PDF integral não foi incluído no repositório público. A seção de depoimentos mantém espaços reservados para avaliações reais autorizadas, e o selo da página é editorial, sem alegar certificação ou garantia.

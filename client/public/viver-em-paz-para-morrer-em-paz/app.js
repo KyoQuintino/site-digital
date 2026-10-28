@@ -1,6 +1,6 @@
 (() => {
   // Link oficial do checkout fornecido pelo responsável pela oferta.
-  const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/U108118072R";
+  const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/C108118040T";
 
   const menuButton = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#menu-principal");
