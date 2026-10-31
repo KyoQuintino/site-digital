@@ -77,7 +77,7 @@ O PDF integral não foi incluído no repositório público; a entrega do arquivo
 
 ## Nova página: 101 Sucos Detox
 
-A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, está disponível em `/101-sucos-detox` como página estática. Ela preserva o catálogo principal e usa arquivos locais em `client/public/101-sucos-detox/`. Os CTAs apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/p7Zu3B7`.
+A landing page cinematográfica de **101 Sucos Detox**, de Danielle Pereira, está disponível em `/101-sucos-detox` como página estática e agora também aparece como modelo no catálogo principal. Ela usa arquivos locais em `client/public/101-sucos-detox/`. Os CTAs apontam para o checkout Kiwify informado: `https://pay.kiwify.com.br/p7Zu3B7`.
 
 ## Nova página: O Pior Ano da Sua Vida
 

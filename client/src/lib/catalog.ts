@@ -436,6 +436,40 @@ export const products = [
       "Olá! Quero saber mais sobre o e-book “10 Sucos Detox Exterminadores de Gordura”. Vi na DigitalQuintino e gostaria de receber ajuda para finalizar meu pedido.",
   },
   {
+    tag: "NOVA LEITURA",
+    category: "HÁBITOS NATURAIS E BEM-ESTAR",
+    title: "101 Sucos Detox",
+    description:
+      "Um guia digital com 101 receitas naturais e um roteiro de 10 dias para trazer mais variedade e praticidade à rotina.",
+    bullets: [
+      "101 receitas de sucos naturais",
+      "Roteiro prático de 10 dias",
+      "Material em PDF com acesso pela Kiwify",
+    ],
+    image: "/101-sucos-detox/cover-final-lite.webp",
+    imageClass: "portrait",
+    panel: "green",
+    paymentProvider: "Kiwify",
+    href: "/101-sucos-detox",
+    message:
+      "Olá! Quero conhecer o e-book 101 Sucos Detox, de Danielle Pereira. Vi na DigitalQuintino e gostaria de receber ajuda.",
+    details: {
+      subtitle: "101 receitas naturais para consultar no seu ritmo.",
+      author: "Danielle Pereira",
+      gallery: ["/101-sucos-detox/cover-final-lite.webp"],
+      takeaways: [
+        "Experimentar combinações com frutas, folhas, legumes, sementes e ingredientes frescos",
+        "Usar o roteiro de 10 dias como ponto de partida para criar constância",
+        "Consultar as receitas no celular, tablet ou computador",
+      ],
+      chapters: [
+        "Receitas para variar a rotina",
+        "Como escolher e preparar os ingredientes",
+        "Roteiro prático de 10 dias",
+      ],
+    },
+  },
+  {
     tag: "LEITURA CRÍTICA",
     category: "FÉ, CULTURA E PENSAMENTO",
     title: "Guerra Cultural",
