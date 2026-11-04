@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Typecheck e build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.4.1
+          run_install: false
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Instalar dependências travadas
+        run: pnpm install --frozen-lockfile
+
+      - name: Verificar tipos
+        run: pnpm check
+
+      - name: Gerar build de produção
+        run: pnpm build
+
+      - name: Verificar saída e rewrites Vercel
+        run: |
+          node --input-type=module <<'NODE'
+          import { existsSync } from 'node:fs';
+          import path from 'node:path';
+
+          const root = path.resolve('dist/public');
+          const config = JSON.parse(await (await import('node:fs/promises')).readFile('vercel.json', 'utf8'));
+          const destinations = ['/index.html', ...(config.rewrites ?? []).map(({ destination }) => destination)];
+
+          for (const destination of destinations) {
+            const target = path.resolve(root, `.${destination}`);
+            if (!target.startsWith(`${root}${path.sep}`) || !existsSync(target)) {
+              throw new Error(`Destination ausente ou inválida no build: ${destination}`);
+            }
+          }
+
+          if (!existsSync(path.join(root, 'assets'))) {
+            throw new Error('Diretório de assets Vite não foi gerado.');
+          }
+          console.log(`Build OK: ${destinations.length} destinations verificadas.`);
+          NODE
+
+      - name: Disponibilizar build para revisão
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-digital-build-${{ github.sha }}
+          path: dist/public/
+          if-no-files-found: error
+          retention-days: 7

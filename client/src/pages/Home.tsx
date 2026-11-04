@@ -273,7 +273,7 @@ export default function Home() {
       <div className="announcement">CONTEÚDO QUE CABE NA VIDA REAL <span>·</span> CHECKOUT NA PÁGINA OFICIAL DE CADA OFERTA</div>
       <header className="site-header" id="inicio">
         <a className="brand-link" href="#inicio"><Brand /></a>
-        <nav className={menuOpen ? "open" : ""} aria-label="Navegação principal">
+        <nav id="primary-navigation" className={menuOpen ? "open" : ""} aria-label="Navegação principal">
           <a href="#40-dias" onClick={() => setMenuOpen(false)}>40 Dias com Deus</a><a href="#colecao" onClick={() => setMenuOpen(false)}>Coleção</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a>
         </nav>
         <form className="header-search" role="search" onSubmit={(event) => event.preventDefault()}>
@@ -283,7 +283,7 @@ export default function Home() {
         </form>
         <a className="header-contact" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} /> Falar com a gente</a>
         <ThemeToggle />
-        <button className="menu-button" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((value) => !value)}>{menuOpen ? <X /> : <Menu />}</button>
+        <button className="menu-button" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-controls="primary-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen((value) => !value)}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
 
       <section className="hero" id="inicio-hero">
